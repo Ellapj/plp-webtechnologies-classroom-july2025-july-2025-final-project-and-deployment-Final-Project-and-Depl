@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Delikrafts Meals</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="images/Bakery-Logo.png" alt="Delikrafts Meals Logo">
+        </a>
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <i class="fas fa-shopping-cart"><span id="cart-count">0</span></i>
+            <i id="menu-toggle" class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <section class="checkout-container">
+            <h1>Complete Your Order</h1>
+            
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div id="checkout-message" class="checkout-message" style="display: none;">
+                    <p>Your cart is empty. Please go back to the <a href="products.html">products page</a> to add items.</p>
+                </div>
+                <ul id="order-summary-items" class="summary-details">
+                </ul>
+                <div class="summary-total">
+                    <p>Subtotal: <span id="checkout-subtotal">N0</span></p>
+                    <p>Total: <span id="checkout-total">N0</span></p>
+                </div>
+            </div>
+
+            <div class="payment-details">
+                <h2>Customer Information</h2>
+                <form id="customer-info-form" class="payment-form">
+                    <div class="form-group">
+                        <label for="customer-name">Full Name *</label>
+                        <input type="text" id="customer-name" name="customer-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customer-email">Email Address *</label>
+                        <input type="email" id="customer-email" name="customer-email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customer-phone-main">Phone Number *</label>
+                        <input type="tel" id="customer-phone-main" name="customer-phone-main" placeholder="e.g., 09012345678" required>
+                    </div>
+                </form>
+                
+                <h2>Payment & Delivery</h2>
+                <form id="payment-form" class="payment-form">
+                    <div class="form-group">
+                        <label>Choose an Option:</label>
+                        <div class="delivery-options">
+                            <label><input type="radio" name="delivery-option" value="delivery" required> Delivery</label>
+                            <label><input type="radio" name="delivery-option" value="pickup"> Self Pickup</label>
+                        </div>
+                    </div>
+
+                    <div id="delivery-details-section" class="delivery-details-section" style="display: none;">
+                        <div class="form-group">
+                            <label for="customer-address">Delivery Address</label>
+                            <input type="text" id="customer-address" placeholder="e.g., House No., Street, City" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-phone">Phone Number</label>
+                            <input type="tel" id="customer-phone" placeholder="e.g., 09012345678" required>
+                        </div>
+                        <p class="info-text">You will discuss the final delivery fee with us via WhatsApp.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="payment-method">Choose a Payment Method:</label>
+                        <select id="payment-method" required>
+                            <option value="transfer">Direct Bank Transfer</option>
+                        </select>
+                    </div>
+
+                    <div id="transfer-details" class="payment-transfer-details">
+                        <p>Please make a bank transfer to the account details below. <strong>Your order will be confirmed upon receipt of payment.</strong></p>
+                        <ul class="bank-details-list">
+                            <li><strong>Bank Name:</strong> Moniepoint MFB</li>
+                            <li><strong>Account Name:</strong> Delikrafts Global Nexus Ltd</li>
+                            <li><strong>Account Number:</strong> 6728341493</li>
+                        </ul>
+                    </div>
+
+                    <p>After making your payment, click "Submit Order" and you will be directed to send your receipt via WhatsApp or Email.</p>
+                    
+                    <button type="submit" class="submit-button">Submit Order</button>
+                    <p id="payment-status" class="form-status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+        <div class="contact-info">
+            <p>Email: delikraftsenterprise@gmail.com</p>
+            <p>Phone: 09021520646</p>
+        </div>
+        <p class="copyright">&copy; 2025 Delikrafts Meals. All rights reserved.</p>
+    </footer>
+
+    <a href="https://wa.me/2349021520646" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

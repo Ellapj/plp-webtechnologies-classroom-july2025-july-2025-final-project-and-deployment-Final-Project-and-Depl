@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Delikrafts Meals</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="products-page">
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="images/Bakery-Logo.png" alt="Delikrafts Meals Logo">
+        </a>
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <i class="fas fa-shopping-cart"><span id="cart-count">0</span></i>
+            <i id="menu-toggle" class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Floating Cart Icon (Products Page Only) -->
+    <div class="floating-cart">
+        <i class="fas fa-shopping-cart"><span id="cart-count-floating">0</span></i>
+    </div>
+
+    <main>
+        <section class="products-container">
+            <h1>Our Cakes, Pastries, Drinks & Local Meals</h1>
+            <div class="search-and-filter">
+                <form class="search-box">
+                    <input type="search" id="product-search" placeholder="Search products...">
+                    <i class="fas fa-search search-icon"></i>
+                </form>
+                <div class="category-buttons">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="cakes">Cakes</button>
+                    <button class="category-btn" data-category="pastries">Pastries</button>
+                    <button class="category-btn" data-category="drinks">Drinks</button>
+                    <button class="category-btn" data-category="food">Food</button>
+                </div>
+            </div>
+
+            <div id="product-grid" class="product-grid">
+                <article class="product-card cakes" data-id="1" data-name="Chocolate Foil Cake" data-price="3500">
+                    <img src="images/16.png" alt="Chocolate Fudge Cake">
+                    <h3>Chocolate Foil Cake</h3>
+                    <p>N3,500</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card pastries" data-id="2" data-name="Puff Puff (By 10)" data-price="1500">
+                    <img src="images/9.png" alt="Strawberry Pastry">
+                    <h3>Puff Puff (By 10)</h3>
+                    <p>N1,500</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card pastries" data-id="3" data-name="Milky Vanilla Cookie" data-price="7000">
+                    <img src="images/Milky-vanilla cookies.png" alt="Assorted Cookies">
+                    <h3>Milky Vanilla Cookie(1.5l Jar)</h3>
+                    <p>N7,000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card pastries" data-id="4" data-name="Chocolate Cookies" data-price="8000">
+                    <img src="images/Chocolate-cookies.png" alt="Assorted Cookies">
+                    <h3>Chocolate Cookies(1.5l Jar)</h3>
+                    <p>N8,000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card cakes" data-id="5" data-name="Classic Vanilla Cake" data-price="8000">
+                    <img src="images/size-6-vanilla.jpg" alt="Classic Vanilla Cake">
+                    <h3>Classic Vanilla Cake-6" Single layer</h3>
+                    <p>N8,000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card cakes" data-id="6" data-name="Classic Vanilla-Foil Cake" data-price="3000">
+                    <img src="images/17.png" alt="Classic Vanilla Cake">
+                    <h3>Classic Vanilla-Foil Cake</h3>
+                    <p>N3,000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card cakes" data-id="7" data-name="Red Velvet Cake Slice" data-price="4500">
+                    <img src="images/Redvelvet-Cake-slice.png" alt="Cake Slice">
+                    <h3>Red Velvet Cake Slice</h3>
+                    <p>N4,500</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card pastries" data-id="8" data-name="Doughnut" data-price="500">
+                    <img src="images/Doughnut.png" alt="Doughnut">
+                    <h3>Doughnut(Jam/Plain)</h3>
+                    <p>N500</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card pastries" data-id="9" data-name="Buns(by 10)" data-price="2000">
+                    <img src="images/Milky-Buns.png" alt="Buns">
+                    <h3>Buns(by 10)</h3>
+                    <p>N2,000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card food" data-id="10" data-name="Egbo with Beans and Fish" data-price="4000">
+                    <img src="images/Egbo.png" alt="Egbo">
+                    <h3>Egbo with Beans and Fish</h3>
+                    <p>N4,000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card food" data-id="11" data-name="Ewa Agonyin With Fish" data-price="3500">
+                    <img src="images/Ewa-agonyin.png" alt="Ewa">
+                    <h3>Ewa Agonyin With Fish</h3>
+                    <p>N3,500</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card food" data-id="12" data-name="Ofada Rice with sauce" data-price="5000">
+                    <img src="images/Ofada.png" alt="Ofada Rice">
+                    <h3>Ofada Rice with sauce</h3>
+                    <p>N5,000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card food" data-id="13" data-name="Ekuru with sauce" data-price="1500">
+                    <img src="images/Ekuru.png" alt="Ekuru">
+                    <h3>Ekuru with sauce</h3>
+                    <p>N1,500</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card cakes" data-id="14" data-name="Red Velvet Foil Cake" data-price="3500">
+                    <img src="images/7.png" alt="Red Velvet Cake">
+                    <h3>Red Velvet Foil Cake</h3>
+                    <p>N3,500</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card cakes" data-id="15" data-name="Bridal Shower Cake" data-price="35000">
+                    <img src="images/Bridal-shower-cake.png" alt="Bridal Cake">
+                    <h3>Bridal Shower Cake</h3>
+                    <p>N35,000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card cakes" data-id="16" data-name="Traditional Wedding Cake" data-price="170000">
+                    <img src="images/18.png" alt="Wedding Cake">
+                    <h3>Traditional Wedding Cake</h3>
+                    <p>N170,000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card cakes" data-id="17" data-name="Anniversary Cake" data-price="100000">
+                    <img src="images/Anniversary-cakes.png" alt="Anniversary">
+                    <h3>Anniversary Cake</h3>
+                    <p>N100,000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card cakes" data-id="18" data-name="6in Basic Buttercream Cake" data-price="18000">
+                    <img src="images/13.png" alt="Birthday">
+                    <h3>6" Basic Buttercream Cake(Vanilla&Chocolate)</h3>
+                    <p>N18,000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card cakes" data-id="19" data-name="7in Buttercream Character cake" data-price="30000">
+                    <img src="images/7inches-buttercream-charactercake.png" alt="Birthday">
+                    <h3> 7" Buttercream Character cake(Vanilla)</h3>
+                    <p>N30,000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card cakes" data-id="20" data-name="2-tier Fondant Cake" data-price="100000">
+                    <img src="images/2-tier-fondant-cake.png" alt="Birthday">
+                    <h3>2-tier Fondant Cake(Light Fruit)</h3>
+                    <p>N100,000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card drinks" data-id="21" data-name="Zobo Drink" data-price="800">
+                    <img src="images/Zobo-drink.png" alt="Zobo Drink">
+                    <h3>Zobo Drink</h3>
+                    <p>N800</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card drinks" data-id="22" data-name="Yoghurt Drink" data-price="1500">
+                    <img src="images/Yoghurt-drink.png" alt="Yoghurt">
+                    <h3>Yoghurt Drink</h3>
+                    <p>N1,500</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card food" data-id="23" data-name="Moimoi Elewe" data-price="1000">
+                    <img src="images/Moimoi-elewe.png" alt="Moimoi">
+                    <h3>Moimoi Elewe</h3>
+                    <p>N1,000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card food" data-id="24" data-name="Yam/Sweet Potato pottage with Fish" data-price="4000">
+                    <img src="images/Yam-pottage.png" alt="Yam">
+                    <h3>Yam/Sweet Potato pottage with Fish</h3>
+                    <p>N4,000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card pastries" data-id="25" data-name="Meat Pie" data-price="1000">
+                    <img src="images/11.png" alt="Meat Pie">
+                    <h3>Meat Pie</h3>
+                    <p>N1,000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card pastries" data-id="28" data-name="Small Chops(Basic)" data-price="2000">
+                    <img src="images/small-chops.jpg" alt="small chops">
+                    <h3>Small Chops(Basic)</h3>
+                    <p>N2,000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card pastries" data-id="26" data-name="Sausage Roll" data-price="500">
+                    <img src="images/12.png" alt="Sausage Roll">
+                    <h3>Sausage Roll</h3>
+                    <p>N500</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+                <article class="product-card cakes" data-id="27" data-name="Chocolate Cake slice" data-price="4500">
+                    <img src="images/Chocolate-slice.jpg" alt="Chocolate slice">
+                    <h3>Chocolate Cake slice</h3>
+                    <p>N4,500</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </article>
+            </div>
+        </section>
+        
+        <section class="delivery-and-extras">
+            <div class="delivery-info">
+                <h3>Custom Order Notice</h3>
+                <p>All custom orders take <strong>48-72 hours</strong> to be delivered. We appreciate your patience as we prepare your perfect meal!</p>
+                <p class="free-water"><strong>All food orders come with a free bottle of water.</strong></p>
+            </div>
+            <div class="extras-list">
+                <div class="extras-header">
+                    <h3>Add-On Extras</h3>
+                </div>
+                <div class="product-grid">
+                    <article class="product-card extras" data-id="100" data-name="Bread" data-price="1000">
+                        <img src="images/bread.png" alt="Bread">
+                        <h3>Bread</h3>
+                        <p>N1,000</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </article>
+                    <article class="product-card extras" data-id="101" data-name="Plantain" data-price="500">
+                        <img src="images/plantain.jpg" alt="Plantain">
+                        <h3>Plantain</h3>
+                        <p>N500/portion</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </article>
+                    <article class="product-card extras" data-id="102" data-name="Yam" data-price="500">
+                        <img src="images/yam.png" alt="Yam">
+                        <h3>Boiled Yam</h3>
+                        <p>N500/portion</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </article>
+                    <article class="product-card extras" data-id="103" data-name="Garri" data-price="200">
+                        <img src="images/garri.png" alt="Garri">
+                        <h3>Garri</h3>
+                        <p>N200/portion</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </article>
+                    <article class="product-card extras" data-id="104" data-name="Beef" data-price="300">
+                        <img src="images/beef.jpg" alt="Beef">
+                        <h3>Beef</h3>
+                        <p>N300/1</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </article>
+                    <article class="product-card extras" data-id="105" data-name="Chicken" data-price="1000">
+                        <img src="images/chicken.png" alt="Chicken">
+                        <h3>Chicken</h3>
+                        <p>N1,000/1</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </article>
+                    <article class="product-card extras" data-id="106" data-name="Fish(Panla)" data-price="500">
+                        <img src="images/panla.jpg" alt="Fish">
+                        <h3>Fish (Panla)</h3>
+                        <p>N500/1</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </article>
+                    <article class="product-card extras" data-id="107" data-name="Egg" data-price="300">
+                        <img src="images/egg.jpg" alt="Egg">
+                        <h3>Egg</h3>
+                        <p>N300/1</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <span class="close-button">&times;</span>
+            </div>
+            <ul id="cart-items" class="cart-items">
+            </ul>
+            <div class="cart-total">
+                <p>Total: <span id="cart-total-price">N0</span></p>
+            </div>
+            <a href="checkout.html" class="checkout-button">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+        <div class="contact-info">
+            <p>Email: delikraftsenterprise@gmail.com</p>
+            <p>Phone: 09021520646</p>
+        </div>
+        <p class="copyright">&copy; 2025 Delikrafts Meals. All rights reserved.</p>
+    </footer>
+
+    <a href="https://wa.me/2349021520646" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Delikrafts Meals</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="images/Bakery-Logo.png" alt="Delikrafts Meals Logo">
+        </a>
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <i class="fas fa-shopping-cart"><span id="cart-count">0</span></i>
+            <i id="menu-toggle" class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-container">
+            <h1 class="section-title-green">Get in Touch</h1>
+            <div class="contact-content">
+                <form id="contact-form" class="contact-form">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                    
+                    <button type="submit" class="submit-button">Send Message</button>
+                    <p id="form-status" class="form-status"></p>
+                </form>
+                
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><strong>Email:</strong> delikraftsenterprise@gmail.com</p>
+                    <p><strong>Phone:</strong> 09021520646</p>
+                    <p><strong>Address:</strong> Ibadan, Oyo State, Nigeria.</p>
+                    
+                    <div class="social-contact-icons">
+                        <a href="mailto:delikraftsenterprise@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.facebook.com/share/1ZhDgWFaBq/" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/delikraftsmeals" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <span class="close-button">&times;</span>
+            </div>
+            <ul id="cart-items" class="cart-items">
+            </ul>
+            <div class="cart-total">
+                <p>Total: <span id="cart-total-price">N0</span></p>
+            </div>
+            <a href="checkout.html" class="checkout-button">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+        <div class="contact-info">
+            <p>Email: delikraftsenterprise@gmail.com</p>
+            <p>Phone: 09021520646</p>
+        </div>
+        <p class="copyright">&copy; 2025 Delikrafts Meals. All rights reserved.</p>
+    </footer>
+
+    <a href="https://wa.me/2349021520646" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
